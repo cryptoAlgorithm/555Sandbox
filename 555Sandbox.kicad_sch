@@ -2276,15 +2276,15 @@
 		(uuid "3b8dfa94-9ca6-438c-bcd6-8ca5aceb9a22")
 	)
 	(label "TRIG"
-		(at 139.7 113.03 180)
+		(at 151.13 116.84 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify right bottom)
+			(justify left bottom)
 		)
-		(uuid "4ec9d42d-8eef-43b0-8d49-e865fd25693e")
+		(uuid "615d8547-79a7-465d-a996-67d40e664aa3")
 	)
 	(label "OUT"
 		(at 226.06 92.71 180)
