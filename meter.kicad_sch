@@ -1783,7 +1783,7 @@
 		)
 		(uuid 35285dca-f2c5-46d3-af1e-2421ee0e0977)
 	)
-	(text "~6V REF\n12.5mA drive"
+	(text "~5V REF\n6.25mA drive"
 		(exclude_from_sim no)
 		(at 29.718 115.824 0)
 		(effects
@@ -2429,7 +2429,7 @@
 				)
 			)
 		)
-		(property "Value" "3K8"
+		(property "Value" "10K"
 			(at 52.07 105.41 90)
 			(effects
 				(font
@@ -3154,7 +3154,7 @@
 				)
 			)
 		)
-		(property "Value" "1K"
+		(property "Value" "3K3"
 			(at 52.07 92.71 90)
 			(effects
 				(font
