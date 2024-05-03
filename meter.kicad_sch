@@ -1176,12 +1176,6 @@
 		(uuid "7f89d419-098d-4352-8a00-2101bda4c265")
 	)
 	(junction
-		(at 52.07 110.49)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "846e2f00-9cf7-48e3-a9dd-4014cb4387c2")
-	)
-	(junction
 		(at 173.99 90.17)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1204,6 +1198,12 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "d6e485a6-3816-484e-ac48-ffa178583ef1")
+	)
+	(junction
+		(at 52.07 110.49)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "e35770ba-a6c3-4b9a-994a-c331ced15a2d")
 	)
 	(junction
 		(at 52.07 97.79)
@@ -1519,6 +1519,16 @@
 	)
 	(wire
 		(pts
+			(xy 52.07 110.49) (xy 52.07 113.03)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "8e02d15b-e83b-45ba-894f-6a369ec453b0")
+	)
+	(wire
+		(pts
 			(xy 171.45 77.47) (xy 173.99 77.47)
 		)
 		(stroke
@@ -1616,16 +1626,6 @@
 			(type default)
 		)
 		(uuid "ab6fb56f-b24a-409b-bc36-8c1eac81cfd2")
-	)
-	(wire
-		(pts
-			(xy 52.07 113.03) (xy 52.07 110.49)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "abc27c72-3f61-46ec-9508-91b7cf314e02")
 	)
 	(wire
 		(pts
@@ -1809,7 +1809,7 @@
 	)
 	(rectangle
 		(start 27.94 80.01)
-		(end 76.2 129.54)
+		(end 76.2 140.97)
 		(stroke
 			(width 0)
 			(type dash)
@@ -1821,7 +1821,7 @@
 	)
 	(text "~5V REF\n6.25mA drive"
 		(exclude_from_sim no)
-		(at 29.718 125.476 0)
+		(at 29.718 137.414 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -2861,6 +2861,73 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R")
+		(at 52.07 124.46 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "8f70a29b-d6a1-466b-99de-ca160922597e")
+		(property "Reference" "R8"
+			(at 49.53 124.46 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "3K3"
+			(at 52.07 124.46 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical"
+			(at 53.848 124.46 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 52.07 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 52.07 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "ba2d522b-f1ac-479a-bf7a-06998e2427fa")
+		)
+		(pin "1"
+			(uuid "e8f91484-eb8c-4866-893c-80319ae6afc6")
+		)
+		(instances
+			(project "555Sandbox"
+				(path "/d3ec5529-4071-49eb-a022-408dfaa9f0dc/36bc0783-40fd-4027-87f9-17cbb705ca8e"
+					(reference "R8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:LED")
 		(at 167.64 77.47 0)
 		(mirror x)
@@ -2996,7 +3063,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 52.07 120.65 0)
+		(at 52.07 128.27 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3005,7 +3072,7 @@
 		(fields_autoplaced yes)
 		(uuid "c233b528-a87c-41a5-999d-278ac6d1d341")
 		(property "Reference" "#PWR021"
-			(at 52.07 127 0)
+			(at 52.07 134.62 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3014,7 +3081,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 52.07 125.73 0)
+			(at 52.07 133.35 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3022,7 +3089,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 52.07 120.65 0)
+			(at 52.07 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3031,7 +3098,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 52.07 120.65 0)
+			(at 52.07 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3040,7 +3107,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 52.07 120.65 0)
+			(at 52.07 128.27 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3055,6 +3122,73 @@
 			(project "555Sandbox"
 				(path "/d3ec5529-4071-49eb-a022-408dfaa9f0dc/36bc0783-40fd-4027-87f9-17cbb705ca8e"
 					(reference "#PWR021")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 52.07 116.84 180)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "c52b50fe-1228-4518-b5f0-5605865696d2")
+		(property "Reference" "R9"
+			(at 49.53 116.84 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "3K3"
+			(at 52.07 116.84 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical"
+			(at 53.848 116.84 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 52.07 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 52.07 116.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "5e747c1e-2a3c-4ab6-abb2-64c3eb08eb38")
+		)
+		(pin "1"
+			(uuid "e45c7900-9ab7-41dc-8c05-ced683aeeed6")
+		)
+		(instances
+			(project "555Sandbox"
+				(path "/d3ec5529-4071-49eb-a022-408dfaa9f0dc/36bc0783-40fd-4027-87f9-17cbb705ca8e"
+					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -3123,73 +3257,6 @@
 			(project "555Sandbox"
 				(path "/d3ec5529-4071-49eb-a022-408dfaa9f0dc/36bc0783-40fd-4027-87f9-17cbb705ca8e"
 					(reference "D11")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 52.07 116.84 180)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "ea94964a-7371-45c4-8465-5da7cf9f0bee")
-		(property "Reference" "R8"
-			(at 49.53 116.84 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "6K7"
-			(at 52.07 116.84 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
-			(at 53.848 116.84 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 52.07 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 52.07 116.84 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "1be482a1-f095-444c-97e5-b13a49b60ceb")
-		)
-		(pin "1"
-			(uuid "00ee365a-1105-4aeb-8f25-4ba5d66ebdd5")
-		)
-		(instances
-			(project "555Sandbox"
-				(path "/d3ec5529-4071-49eb-a022-408dfaa9f0dc/36bc0783-40fd-4027-87f9-17cbb705ca8e"
-					(reference "R8")
 					(unit 1)
 				)
 			)
