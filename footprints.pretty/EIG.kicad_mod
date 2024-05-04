@@ -73,6 +73,7 @@
 			(justify mirror)
 		)
 	)
+	(attr board_only exclude_from_pos_files exclude_from_bom allow_missing_courtyard)
 	(fp_poly
 		(pts
 			(xy 5.55876 0.102965) (xy 5.552039 0.21994) (xy 5.116171 0.225959) (xy 4.945723 0.227191) (xy 4.803841 0.225849)
