@@ -480,8 +480,8 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "gerbers/v1/",
-      "pos_files": "",
+      "plot": "fab/v1.4/gerbers/",
+      "pos_files": "fab/v1.4/",
       "specctra_dsn": "",
       "step": "",
       "svg": "",
@@ -501,19 +501,84 @@
       "ref_range_delimiter": "",
       "string_delimiter": "\""
     },
-    "bom_presets": [],
+    "bom_presets": [
+      {
+        "exclude_dnp": false,
+        "fields_ordered": [
+          {
+            "group_by": false,
+            "label": "Designator",
+            "name": "Reference",
+            "show": true
+          },
+          {
+            "group_by": false,
+            "label": "Comment",
+            "name": "Value",
+            "show": true
+          },
+          {
+            "group_by": false,
+            "label": "Datasheet",
+            "name": "Datasheet",
+            "show": false
+          },
+          {
+            "group_by": false,
+            "label": "Footprint",
+            "name": "Footprint",
+            "show": true
+          },
+          {
+            "group_by": false,
+            "label": "Qty",
+            "name": "${QUANTITY}",
+            "show": false
+          },
+          {
+            "group_by": false,
+            "label": "DNP",
+            "name": "${DNP}",
+            "show": false
+          },
+          {
+            "group_by": false,
+            "label": "#",
+            "name": "${ITEM_NUMBER}",
+            "show": false
+          },
+          {
+            "group_by": true,
+            "label": "JLCPCB Part #",
+            "name": "Part",
+            "show": true
+          },
+          {
+            "group_by": false,
+            "label": "Description",
+            "name": "Description",
+            "show": false
+          }
+        ],
+        "filter_string": "",
+        "group_symbols": true,
+        "name": "JLCPCB Assembly",
+        "sort_asc": true,
+        "sort_field": "Reference"
+      }
+    ],
     "bom_settings": {
       "exclude_dnp": false,
       "fields_ordered": [
         {
           "group_by": false,
-          "label": "Reference",
+          "label": "Designator",
           "name": "Reference",
           "show": true
         },
         {
-          "group_by": true,
-          "label": "Value",
+          "group_by": false,
+          "label": "Comment",
           "name": "Value",
           "show": true
         },
@@ -521,7 +586,7 @@
           "group_by": false,
           "label": "Datasheet",
           "name": "Datasheet",
-          "show": true
+          "show": false
         },
         {
           "group_by": false,
@@ -533,20 +598,38 @@
           "group_by": false,
           "label": "Qty",
           "name": "${QUANTITY}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "DNP",
+          "name": "${DNP}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "JLCPCB Part #",
+          "name": "Part",
           "show": true
         },
         {
-          "group_by": true,
-          "label": "DNP",
-          "name": "${DNP}",
-          "show": true
+          "group_by": false,
+          "label": "Description",
+          "name": "Description",
+          "show": false
         }
       ],
       "filter_string": "",
-      "group_symbols": true,
-      "name": "Grouped By Value",
+      "group_symbols": false,
+      "name": "",
       "sort_asc": true,
-      "sort_field": "Reference"
+      "sort_field": "Part"
     },
     "connection_grid_size": 50.0,
     "drawing": {
@@ -591,10 +674,6 @@
     [
       "d3ec5529-4071-49eb-a022-408dfaa9f0dc",
       "Root"
-    ],
-    [
-      "36bc0783-40fd-4027-87f9-17cbb705ca8e",
-      "Voltage Meter"
     ]
   ],
   "text_variables": {}

@@ -5,30 +5,33 @@
 	(uuid "d3ec5529-4071-49eb-a022-408dfaa9f0dc")
 	(paper "A4")
 	(lib_symbols
-		(symbol "Connector:Conn_01x02_Pin"
+		(symbol "Device:Battery_Cell"
+			(pin_numbers hide)
 			(pin_names
-				(offset 1.016) hide)
+				(offset 0) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
-			(property "Reference" "J"
-				(at 0 2.54 0)
+			(property "Reference" "BT"
+				(at 2.54 2.54 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Value" "Conn_01x02_Pin"
-				(at 0 -5.08 0)
+			(property "Value" "Battery_Cell"
+				(at 2.54 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
 			(property "Footprint" ""
-				(at 0 0 0)
+				(at 0 1.524 90)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -37,6 +40,15 @@
 				)
 			)
 			(property "Datasheet" "~"
+				(at 0 1.524 90)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Single-cell battery"
 				(at 0 0 0)
 				(effects
 					(font
@@ -45,7 +57,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Generic connector, single row, 01x02, script generated"
+			(property "ki_keywords" "battery cell"
 				(at 0 0 0)
 				(effects
 					(font
@@ -54,39 +66,35 @@
 					(hide yes)
 				)
 			)
-			(property "ki_locked" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
+			(symbol "Battery_Cell_0_1"
+				(rectangle
+					(start -2.286 1.778)
+					(end 2.286 1.524)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type outline)
 					)
 				)
-			)
-			(property "ki_keywords" "connector"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
+				(rectangle
+					(start -1.524 1.016)
+					(end 1.524 0.508)
+					(stroke
+						(width 0)
+						(type default)
 					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "Connector*:*_1x??_*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
+					(fill
+						(type outline)
 					)
-					(hide yes)
 				)
-			)
-			(symbol "Conn_01x02_Pin_1_1"
 				(polyline
 					(pts
-						(xy 1.27 -2.54) (xy 0.8636 -2.54)
+						(xy 0 0.762) (xy 0 0)
 					)
 					(stroke
-						(width 0.1524)
+						(width 0)
 						(type default)
 					)
 					(fill
@@ -95,42 +103,46 @@
 				)
 				(polyline
 					(pts
-						(xy 1.27 0) (xy 0.8636 0)
+						(xy 0 1.778) (xy 0 2.54)
 					)
 					(stroke
-						(width 0.1524)
+						(width 0)
 						(type default)
 					)
 					(fill
 						(type none)
 					)
 				)
-				(rectangle
-					(start 0.8636 -2.413)
-					(end 0 -2.667)
+				(polyline
+					(pts
+						(xy 0.762 3.048) (xy 1.778 3.048)
+					)
 					(stroke
-						(width 0.1524)
+						(width 0.254)
 						(type default)
 					)
 					(fill
-						(type outline)
+						(type none)
 					)
 				)
-				(rectangle
-					(start 0.8636 0.127)
-					(end 0 -0.127)
+				(polyline
+					(pts
+						(xy 1.27 3.556) (xy 1.27 2.54)
+					)
 					(stroke
-						(width 0.1524)
+						(width 0.254)
 						(type default)
 					)
 					(fill
-						(type outline)
+						(type none)
 					)
 				)
+			)
+			(symbol "Battery_Cell_1_1"
 				(pin passive line
-					(at 5.08 0 180)
-					(length 3.81)
-					(name "Pin_1"
+					(at 0 5.08 270)
+					(length 2.54)
+					(name "+"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -146,9 +158,9 @@
 					)
 				)
 				(pin passive line
-					(at 5.08 -2.54 180)
-					(length 3.81)
-					(name "Pin_2"
+					(at 0 -2.54 90)
+					(length 2.54)
+					(name "-"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -910,9 +922,10 @@
 				)
 			)
 		)
-		(symbol "Diode:1N4001"
+		(symbol "Diode:1N5819WS"
 			(pin_numbers hide)
-			(pin_names hide)
+			(pin_names
+				(offset 1.016) hide)
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -924,7 +937,7 @@
 					)
 				)
 			)
-			(property "Value" "1N4001"
+			(property "Value" "1N5819WS"
 				(at 0 -2.54 0)
 				(effects
 					(font
@@ -932,7 +945,16 @@
 					)
 				)
 			)
-			(property "Footprint" "Diode_THT:D_DO-41_SOD81_P10.16mm_Horizontal"
+			(property "Footprint" "Diode_SMD:D_SOD-323"
+				(at 0 -4.445 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2204281430_Guangdong-Hottech-1N5819WS_C191023.pdf"
 				(at 0 0 0)
 				(effects
 					(font
@@ -941,7 +963,7 @@
 					(hide yes)
 				)
 			)
-			(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
+			(property "Description" "40V 600mV@1A 1A SOD-323 Schottky Barrier Diodes, SOD-323"
 				(at 0 0 0)
 				(effects
 					(font
@@ -950,7 +972,7 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "50V 1A General Purpose Rectifier Diode, DO-41"
+			(property "ki_keywords" "diode Schottky"
 				(at 0 0 0)
 				(effects
 					(font
@@ -959,7 +981,7 @@
 					(hide yes)
 				)
 			)
-			(property "Sim.Device" "D"
+			(property "ki_fp_filters" "D*SOD?323*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -968,46 +990,7 @@
 					(hide yes)
 				)
 			)
-			(property "Sim.Pins" "1=K 2=A"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "diode"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_fp_filters" "D*DO?41*"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "1N4001_0_1"
-				(polyline
-					(pts
-						(xy -1.27 1.27) (xy -1.27 -1.27)
-					)
-					(stroke
-						(width 0.254)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
+			(symbol "1N5819WS_0_1"
 				(polyline
 					(pts
 						(xy 1.27 0) (xy -1.27 0)
@@ -1032,8 +1015,20 @@
 						(type none)
 					)
 				)
+				(polyline
+					(pts
+						(xy -1.905 0.635) (xy -1.905 1.27) (xy -1.27 1.27) (xy -1.27 -1.27) (xy -0.635 -1.27) (xy -0.635 -0.635)
+					)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
 			)
-			(symbol "1N4001_1_1"
+			(symbol "1N5819WS_1_1"
 				(pin passive line
 					(at -3.81 0 0)
 					(length 2.54)
@@ -1072,24 +1067,23 @@
 				)
 			)
 		)
-		(symbol "Switch:SW_Push"
+		(symbol "Mechanical:MountingHole_Pad"
 			(pin_numbers hide)
 			(pin_names
 				(offset 1.016) hide)
-			(exclude_from_sim no)
-			(in_bom yes)
+			(exclude_from_sim yes)
+			(in_bom no)
 			(on_board yes)
-			(property "Reference" "SW"
-				(at 1.27 2.54 0)
+			(property "Reference" "H"
+				(at 0 6.35 0)
 				(effects
 					(font
 						(size 1.27 1.27)
 					)
-					(justify left)
 				)
 			)
-			(property "Value" "SW_Push"
-				(at 0 -1.524 0)
+			(property "Value" "MountingHole_Pad"
+				(at 0 4.445 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1097,7 +1091,7 @@
 				)
 			)
 			(property "Footprint" ""
-				(at 0 5.08 0)
+				(at 0 0 0)
 				(effects
 					(font
 						(size 1.27 1.27)
@@ -1106,15 +1100,6 @@
 				)
 			)
 			(property "Datasheet" "~"
-				(at 0 5.08 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Push button switch, generic, two pins"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1123,7 +1108,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_keywords" "switch normally-open pushbutton push-button"
+			(property "Description" "Mounting Hole with connection"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1132,55 +1117,40 @@
 					(hide yes)
 				)
 			)
-			(symbol "SW_Push_0_1"
+			(property "ki_keywords" "mounting hole"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_fp_filters" "MountingHole*Pad*"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "MountingHole_Pad_0_1"
 				(circle
-					(center -2.032 0)
-					(radius 0.508)
+					(center 0 1.27)
+					(radius 1.27)
 					(stroke
-						(width 0)
+						(width 1.27)
 						(type default)
 					)
 					(fill
 						(type none)
 					)
 				)
-				(polyline
-					(pts
-						(xy 0 1.27) (xy 0 3.048)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 2.54 1.27) (xy -2.54 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(circle
-					(center 2.032 0)
-					(radius 0.508)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(pin passive line
-					(at -5.08 0 0)
+			)
+			(symbol "MountingHole_Pad_1_1"
+				(pin input line
+					(at 0 -2.54 90)
 					(length 2.54)
 					(name "1"
 						(effects
@@ -1197,10 +1167,147 @@
 						)
 					)
 				)
+			)
+		)
+		(symbol "Switch:SW_SPDT"
+			(pin_names
+				(offset 0) hide)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(property "Reference" "SW"
+				(at 0 5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "SW_SPDT"
+				(at 0 -5.08 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Datasheet" "~"
+				(at 0 -7.62 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "Switch, single pole double throw"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "ki_keywords" "switch single-pole double-throw spdt ON-ON"
+				(at 0 0 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(symbol "SW_SPDT_0_1"
+				(circle
+					(center -2.032 0)
+					(radius 0.4572)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy -1.651 0.254) (xy 1.651 2.286)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 -2.54)
+					(radius 0.4572)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(circle
+					(center 2.032 2.54)
+					(radius 0.4572)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+			)
+			(symbol "SW_SPDT_1_1"
+				(rectangle
+					(start -3.175 3.81)
+					(end 3.175 -3.81)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
 				(pin passive line
-					(at 5.08 0 180)
+					(at 5.08 2.54 180)
 					(length 2.54)
-					(name "2"
+					(name "A"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 2.54)
+					(name "B"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -1215,9 +1322,27 @@
 						)
 					)
 				)
+				(pin passive line
+					(at 5.08 -2.54 180)
+					(length 2.54)
+					(name "C"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
 			)
 		)
-		(symbol "Timer:NE555P"
+		(symbol "Timer:LMC555xM"
 			(exclude_from_sim no)
 			(in_bom yes)
 			(on_board yes)
@@ -1230,7 +1355,7 @@
 					(justify left)
 				)
 			)
-			(property "Value" "NE555P"
+			(property "Value" "LMC555xM"
 				(at 2.54 8.89 0)
 				(effects
 					(font
@@ -1239,16 +1364,7 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
-				(at 16.51 -10.16 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/ne555.pdf"
+			(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
 				(at 21.59 -10.16 0)
 				(effects
 					(font
@@ -1257,7 +1373,16 @@
 					(hide yes)
 				)
 			)
-			(property "Description" "Precision Timers, 555 compatible,  PDIP-8"
+			(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lmc555.pdf"
+				(at 21.59 -10.16 0)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+					(hide yes)
+				)
+			)
+			(property "Description" "CMOS Timer, 555 compatible, SOIC-8"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1275,7 +1400,7 @@
 					(hide yes)
 				)
 			)
-			(property "ki_fp_filters" "DIP*W7.62mm*"
+			(property "ki_fp_filters" "SOIC*3.9x4.9mm*P1.27mm*"
 				(at 0 0 0)
 				(effects
 					(font
@@ -1284,7 +1409,7 @@
 					(hide yes)
 				)
 			)
-			(symbol "NE555P_0_0"
+			(symbol "LMC555xM_0_0"
 				(pin power_in line
 					(at 0 -10.16 90)
 					(length 2.54)
@@ -1322,7 +1447,7 @@
 					)
 				)
 			)
-			(symbol "NE555P_0_1"
+			(symbol "LMC555xM_0_1"
 				(rectangle
 					(start -8.89 -7.62)
 					(end 8.89 7.62)
@@ -1346,7 +1471,7 @@
 					)
 				)
 			)
-			(symbol "NE555P_1_1"
+			(symbol "LMC555xM_1_1"
 				(pin input line
 					(at -12.7 5.08 0)
 					(length 3.81)
@@ -1681,16 +1806,18 @@
 		(uuid "2673c670-21b3-4863-ad74-9b23af2dbb12")
 	)
 	(junction
-		(at 60.96 97.79)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "2765f261-7d2b-4ede-8b14-bae91e2bb6dd")
-	)
-	(junction
 		(at 151.13 114.3)
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "6205ec14-175c-4246-8d81-2c18ffeb6174")
+	)
+	(no_connect
+		(at 76.2 43.18)
+		(uuid "cce0999b-08ae-4b97-a36f-45529586d464")
+	)
+	(no_connect
+		(at 62.23 170.18)
+		(uuid "dd19f656-5e09-4fce-9755-f4b6e25c45a8")
 	)
 	(wire
 		(pts
@@ -1734,6 +1861,16 @@
 	)
 	(wire
 		(pts
+			(xy 63.5 38.1) (xy 63.5 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "141bb470-183d-4a37-aa08-36ed0f6cc563")
+	)
+	(wire
+		(pts
 			(xy 111.76 39.37) (xy 111.76 40.64)
 		)
 		(stroke
@@ -1744,23 +1881,13 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 46.99) (xy 95.25 46.99)
+			(xy 80.01 38.1) (xy 80.01 41.91)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "3062aefa-c26f-4acd-b186-a1394e98bed7")
-	)
-	(wire
-		(pts
-			(xy 95.25 41.91) (xy 95.25 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "37bd32e1-e0de-4b3b-a64c-c88c617cd308")
+		(uuid "1b32360a-d52c-4fd9-aab8-6327cb725bf0")
 	)
 	(wire
 		(pts
@@ -1824,16 +1951,6 @@
 	)
 	(wire
 		(pts
-			(xy 95.25 44.45) (xy 92.71 44.45)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "772e934b-d56c-4057-b812-4e2bc576cbcc")
-	)
-	(wire
-		(pts
 			(xy 146.05 119.38) (xy 151.13 119.38)
 		)
 		(stroke
@@ -1861,6 +1978,26 @@
 			(type default)
 		)
 		(uuid "7b77a710-5f25-4b2d-a6e7-f50f4fe83570")
+	)
+	(wire
+		(pts
+			(xy 63.5 40.64) (xy 66.04 40.64)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "7f8c2ff7-9008-43bc-a324-1dd1486c353a")
+	)
+	(wire
+		(pts
+			(xy 76.2 38.1) (xy 80.01 38.1)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "9c21c7c8-0491-4519-a64e-4630660c284a")
 	)
 	(wire
 		(pts
@@ -1901,16 +2038,6 @@
 			(type default)
 		)
 		(uuid "b58a9e4a-37d6-48b0-84ca-e106d66f91c8")
-	)
-	(wire
-		(pts
-			(xy 95.25 46.99) (xy 95.25 49.53)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "b7a0091e-b3b0-4895-bff5-22ed73ed62ec")
 	)
 	(wire
 		(pts
@@ -1961,16 +2088,6 @@
 			(type default)
 		)
 		(uuid "e57be695-18da-4ac5-a367-6cbfac76c6f0")
-	)
-	(wire
-		(pts
-			(xy 60.96 100.33) (xy 60.96 97.79)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e7f6a5e9-8efb-4332-82ae-f03b4e0bb560")
 	)
 	(wire
 		(pts
@@ -2041,17 +2158,6 @@
 			(justify left bottom)
 		)
 		(uuid "25fc8073-5517-45d5-b8cd-f0cc594a9b3d")
-	)
-	(label "VCAP"
-		(at 40.64 142.24 180)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "29184daf-73ec-4a29-b830-2415c8b24461")
 	)
 	(label "DIS"
 		(at 118.11 90.17 0)
@@ -2219,11 +2325,90 @@
 		)
 	)
 	(symbol
+		(lib_id "Diode:1N5819WS")
+		(at 144.78 95.25 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "06002764-1eef-4836-bfc9-429e2846a55f")
+		(property "Reference" "D3"
+			(at 147.32 93.6624 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1N5819WS"
+			(at 147.32 96.2024 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 140.335 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2204281430_Guangdong-Hottech-1N5819WS_C191023.pdf"
+			(at 144.78 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "40V 600mV@1A 1A SOD-323 Schottky Barrier Diodes, SOD-323"
+			(at 144.78 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "C191023"
+			(at 144.78 95.25 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "47cc15fe-408d-4725-8abf-87d7e35e606d")
+		)
+		(pin "2"
+			(uuid "fe3645d2-6b8e-4fd2-850d-a42bf7e96e9c")
+		)
+		(instances
+			(project "555Sandbox"
+				(path "/d3ec5529-4071-49eb-a022-408dfaa9f0dc"
+					(reference "D3")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Device:R_Potentiometer")
 		(at 146.05 114.3 270)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "0c0aca4c-a521-4312-ac6c-27744c6233aa")
@@ -2235,7 +2420,7 @@
 				)
 			)
 		)
-		(property "Value" "100K"
+		(property "Value" "1M"
 			(at 146.05 114.3 90)
 			(effects
 				(font
@@ -2243,7 +2428,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Potentiometer_THT:Potentiometer_Alps_RK163_Single_Horizontal"
+		(property "Footprint" "Potentiometer_THT:Potentiometer_Runtron_RM-065_Vertical"
 			(at 146.05 114.3 0)
 			(effects
 				(font
@@ -2355,6 +2540,85 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:C")
+		(at 111.76 44.45 0)
+		(mirror y)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "16c36724-2c25-423c-a02c-a4c0e06d3394")
+		(property "Reference" "C1"
+			(at 107.95 43.1799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "0.1uF"
+			(at 107.95 45.7199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
+			(at 110.7948 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 111.76 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 111.76 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "C14663"
+			(at 111.76 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "f5a54542-e78b-4008-ba8e-07b96abb5ec9")
+		)
+		(pin "1"
+			(uuid "1a61085a-6b66-4662-921d-b6f1fedebe01")
+		)
+		(instances
+			(project "555Sandbox"
+				(path "/d3ec5529-4071-49eb-a022-408dfaa9f0dc"
+					(reference "C1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:VCC")
 		(at 139.7 81.28 0)
 		(unit 1)
@@ -2448,7 +2712,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 143.002 102.87 90)
 			(effects
 				(font
@@ -2467,6 +2731,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 144.78 102.87 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "C25804"
 			(at 144.78 102.87 0)
 			(effects
 				(font
@@ -2508,7 +2781,7 @@
 				)
 			)
 		)
-		(property "Value" "10uF"
+		(property "Value" "4.7uF"
 			(at 157.861 109.22 90)
 			(effects
 				(font
@@ -2516,7 +2789,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:CP_Radial_D5.0mm_P2.00mm"
+		(property "Footprint" "Capacitor_SMD:CP_Elec_5x5.4"
 			(at 162.56 113.3348 0)
 			(effects
 				(font
@@ -2543,6 +2816,15 @@
 				(hide yes)
 			)
 		)
+		(property "Part" "C336464"
+			(at 158.75 114.3 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "35c54de0-37b6-471c-b09d-8ddec896da2e")
 		)
@@ -2559,17 +2841,35 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 60.96 110.49 0)
+		(lib_id "Timer:LMC555xM")
+		(at 105.41 90.17 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
-		(uuid "38c59541-f361-46f5-a322-ea9d90b91212")
-		(property "Reference" "#PWR07"
-			(at 60.96 116.84 0)
+		(uuid "3062c616-f6f2-4840-a77f-9fbc60a290fe")
+		(property "Reference" "U1"
+			(at 107.6041 77.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "LMC555xM"
+			(at 107.6041 80.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm"
+			(at 127 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2577,16 +2877,8 @@
 				(hide yes)
 			)
 		)
-		(property "Value" "GND"
-			(at 60.96 115.57 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 60.96 110.49 0)
+		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/lmc555.pdf"
+			(at 127 100.33 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2594,8 +2886,8 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" ""
-			(at 60.96 110.49 0)
+		(property "Description" "CMOS Timer, 555 compatible, SOIC-8"
+			(at 105.41 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2603,8 +2895,93 @@
 				(hide yes)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 60.96 110.49 0)
+		(property "Part" "C90760"
+			(at 105.41 90.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "6"
+			(uuid "e46badcd-0baa-4df3-9f7b-e33664956484")
+		)
+		(pin "5"
+			(uuid "80287d56-a69f-4d46-84c5-561601dba8b1")
+		)
+		(pin "4"
+			(uuid "fb45e1ca-1c8f-4361-910d-4bf96ec255a2")
+		)
+		(pin "3"
+			(uuid "6c3b3821-2d1e-45cc-9739-6f196504a5d4")
+		)
+		(pin "2"
+			(uuid "743bb0fc-855a-46fe-97cd-826c8a5088a0")
+		)
+		(pin "8"
+			(uuid "250c8fd4-c680-4e3c-b329-0d4fb17f2151")
+		)
+		(pin "1"
+			(uuid "04f6d61d-e38f-4d0c-81ad-c4c999eabab2")
+		)
+		(pin "7"
+			(uuid "e71925b9-caf8-49d1-92dc-ffd1ac7f3326")
+		)
+		(instances
+			(project "555Sandbox"
+				(path "/d3ec5529-4071-49eb-a022-408dfaa9f0dc"
+					(reference "U1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Mechanical:MountingHole_Pad")
+		(at 59.69 170.18 90)
+		(unit 1)
+		(exclude_from_sim yes)
+		(in_bom no)
+		(on_board yes)
+		(dnp no)
+		(uuid "3655b417-5f20-4df1-957e-a097e2fa8cfe")
+		(property "Reference" "H1"
+			(at 47.244 168.148 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "MountingHole_Pad"
+			(at 47.244 170.688 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "MountingHole:MountingHole_3mm_Pad"
+			(at 59.69 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 59.69 170.18 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Mounting Hole with connection"
+			(at 59.69 170.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2613,7 +2990,73 @@
 			)
 		)
 		(pin "1"
-			(uuid "ca34bfd7-f15b-470e-b5dd-a3b1f6dd491b")
+			(uuid "c16b132d-09ac-4b25-877b-e92756d44f90")
+		)
+		(instances
+			(project "555Sandbox"
+				(path "/d3ec5529-4071-49eb-a022-408dfaa9f0dc"
+					(reference "H1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:VCC")
+		(at 63.5 38.1 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "3d9a0309-a677-43ab-87ba-1373b28de8da")
+		(property "Reference" "#PWR07"
+			(at 63.5 41.91 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "VCC"
+			(at 63.5 33.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 63.5 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 63.5 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"VCC\""
+			(at 63.5 38.1 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "474c4e43-3a31-4b17-9c74-af8055a7c912")
 		)
 		(instances
 			(project "555Sandbox"
@@ -2652,7 +3095,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm"
+		(property "Footprint" "Capacitor_SMD:C_0603_1608Metric"
 			(at 84.1248 100.33 0)
 			(effects
 				(font
@@ -2679,6 +3122,15 @@
 				(hide yes)
 			)
 		)
+		(property "Part" "C14663"
+			(at 85.09 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(pin "2"
 			(uuid "86c04847-4902-4f32-892c-f9e09d1efc50")
 		)
@@ -2689,6 +3141,84 @@
 			(project "555Sandbox"
 				(path "/d3ec5529-4071-49eb-a022-408dfaa9f0dc"
 					(reference "C2")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Diode:1N5819WS")
+		(at 134.62 95.25 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "3ff02ad9-7ff0-4b30-9f34-2adaec96cd6a")
+		(property "Reference" "D2"
+			(at 132.334 93.472 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "1N5819WS"
+			(at 132.334 96.012 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Diode_SMD:D_SOD-323"
+			(at 139.065 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "https://datasheet.lcsc.com/lcsc/2204281430_Guangdong-Hottech-1N5819WS_C191023.pdf"
+			(at 134.62 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "40V 600mV@1A 1A SOD-323 Schottky Barrier Diodes, SOD-323"
+			(at 134.62 95.25 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "C191023"
+			(at 134.62 95.25 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "47cc15fe-408d-4725-8abf-87d7e35e606e")
+		)
+		(pin "2"
+			(uuid "fe3645d2-6b8e-4fd2-850d-a42bf7e96e9d")
+		)
+		(instances
+			(project "555Sandbox"
+				(path "/d3ec5529-4071-49eb-a022-408dfaa9f0dc"
+					(reference "D2")
 					(unit 1)
 				)
 			)
@@ -2788,7 +3318,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 137.922 85.09 90)
 			(effects
 				(font
@@ -2807,6 +3337,15 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 139.7 85.09 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "C25804"
 			(at 139.7 85.09 0)
 			(effects
 				(font
@@ -2897,230 +3436,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:C")
-		(at 111.76 44.45 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "50e5e4cc-d7e0-45df-8ccd-984dc9cfd9cb")
-		(property "Reference" "C1"
-			(at 115.57 43.1799 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "0.1uF"
-			(at 115.57 45.7199 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Capacitor_THT:C_Disc_D4.7mm_W2.5mm_P5.00mm"
-			(at 112.7252 48.26 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 111.76 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Unpolarized capacitor"
-			(at 111.76 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "85f16dae-f0ba-465c-8416-7801625976e8")
-		)
-		(pin "1"
-			(uuid "0f116fef-796c-4bd3-85a6-0cf4ca9ece7f")
-		)
-		(instances
-			(project "555Sandbox"
-				(path "/d3ec5529-4071-49eb-a022-408dfaa9f0dc"
-					(reference "C1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Timer:NE555P")
-		(at 105.41 90.17 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "735470d3-d31f-4328-80a0-615f5f395bbf")
-		(property "Reference" "U1"
-			(at 107.6041 77.47 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "NE555P"
-			(at 107.6041 80.01 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Package_DIP:DIP-8_W7.62mm"
-			(at 121.92 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.ti.com/lit/ds/symlink/ne555.pdf"
-			(at 127 100.33 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Precision Timers, 555 compatible,  PDIP-8"
-			(at 105.41 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "4"
-			(uuid "66c23afb-b611-4770-a5b8-5d755524b239")
-		)
-		(pin "1"
-			(uuid "3f106ec2-0c87-49e9-a6ab-37b272d755bb")
-		)
-		(pin "6"
-			(uuid "2164c9cf-bdbe-4b5a-97ba-b81518747266")
-		)
-		(pin "2"
-			(uuid "015ef6da-a7cb-4f76-b7fd-8738eeb5778a")
-		)
-		(pin "5"
-			(uuid "e52f9379-2502-461c-9bf5-72cf7ea40e49")
-		)
-		(pin "3"
-			(uuid "adef4b12-ced8-455b-89c7-7408ef24a098")
-		)
-		(pin "8"
-			(uuid "2a0ac51c-bd59-48b1-89cb-7b84fb021e56")
-		)
-		(pin "7"
-			(uuid "07b046fc-35d6-411c-aadd-3e205a6d0bf2")
-		)
-		(instances
-			(project "555Sandbox"
-				(path "/d3ec5529-4071-49eb-a022-408dfaa9f0dc"
-					(reference "U1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:VCC")
-		(at 95.25 41.91 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "7a486af2-531e-4f67-af2c-70f74d428a3d")
-		(property "Reference" "#PWR016"
-			(at 95.25 45.72 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "VCC"
-			(at 95.25 36.83 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 95.25 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 95.25 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 95.25 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "f50c0fea-7599-4960-a33b-f9a13fe24d37")
-		)
-		(instances
-			(project "555Sandbox"
-				(path "/d3ec5529-4071-49eb-a022-408dfaa9f0dc"
-					(reference "#PWR016")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:LED")
 		(at 215.9 96.52 180)
 		(unit 1)
@@ -3128,24 +3443,24 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(uuid "933fb8e3-0866-4e3d-aee1-5efc414e0be8")
+		(uuid "6b46e2f9-37e2-4e2e-bf2e-c0ea961e1dc9")
 		(property "Reference" "D1"
-			(at 215.9 93.726 0)
+			(at 216.408 89.662 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Value" "OUT LED"
-			(at 215.9 99.568 0)
+		(property "Value" "LED"
+			(at 216.408 92.202 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
 			)
 		)
-		(property "Footprint" "LED_THT:LED_D5.0mm"
+		(property "Footprint" "LED_SMD:LED_PLCC_2835"
 			(at 215.9 96.52 0)
 			(effects
 				(font
@@ -3172,16 +3487,174 @@
 				(hide yes)
 			)
 		)
-		(pin "2"
-			(uuid "eada1208-5ab9-45d6-8804-2da7c222a848")
+		(property "Part" "C7371920"
+			(at 215.9 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
 		)
 		(pin "1"
-			(uuid "59b9b029-e319-48f9-84d4-375c96dcf6af")
+			(uuid "e8c43ec6-e850-43e5-bdcc-e930f2e62849")
+		)
+		(pin "2"
+			(uuid "fc93128a-0708-42d2-9f37-8611d8e5669d")
 		)
 		(instances
 			(project "555Sandbox"
 				(path "/d3ec5529-4071-49eb-a022-408dfaa9f0dc"
 					(reference "D1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Switch:SW_SPDT")
+		(at 71.12 40.64 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "752e2d51-7bd0-44c9-ab84-a1e899f339b5")
+		(property "Reference" "SW1"
+			(at 71.12 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "SW_SPDT"
+			(at 71.12 34.29 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Button_Switch_THT:SW_Slide_SPDT_Angled_CK_OS102011MA1Q"
+			(at 71.12 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 71.12 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Switch, single pole double throw"
+			(at 71.12 40.64 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "629b7d57-1d53-4a15-91b8-f787ec5d1daa")
+		)
+		(pin "3"
+			(uuid "ebb646db-bb6d-479f-87a8-5590177b3d2a")
+		)
+		(pin "2"
+			(uuid "16bdda3a-01d7-4ac8-b9fd-c8a3a96e9bee")
+		)
+		(instances
+			(project "555Sandbox"
+				(path "/d3ec5529-4071-49eb-a022-408dfaa9f0dc"
+					(reference "SW1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:Battery_Cell")
+		(at 80.01 46.99 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "799eab2b-0857-4c59-a652-791bb54ff3c8")
+		(property "Reference" "BT1"
+			(at 83.566 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "Battery_Cell"
+			(at 83.566 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Battery:BatteryHolder_Keystone_3000_1x12mm"
+			(at 80.01 45.466 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 80.01 45.466 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Single-cell battery"
+			(at 80.01 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "C238097"
+			(at 80.01 46.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "94a44817-5b1b-41d6-896b-1bd4de924997")
+		)
+		(pin "1"
+			(uuid "7e75e685-841d-478c-a717-e54908923262")
+		)
+		(instances
+			(project "555Sandbox"
+				(path "/d3ec5529-4071-49eb-a022-408dfaa9f0dc"
+					(reference "BT1")
 					(unit 1)
 				)
 			)
@@ -3254,235 +3727,8 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 60.96 91.44 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "aef34194-1a00-45f7-af6b-e75b2c888bdd")
-		(property "Reference" "R1"
-			(at 63.5 90.1699 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10K"
-			(at 63.5 92.7099 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P7.62mm_Horizontal"
-			(at 59.182 91.44 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 60.96 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 60.96 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "1cec64a3-5dd4-468c-b409-baa8f9f879fe")
-		)
-		(pin "1"
-			(uuid "81bd3395-21d1-4312-97bf-e9cc6d8ef11f")
-		)
-		(instances
-			(project "555Sandbox"
-				(path "/d3ec5529-4071-49eb-a022-408dfaa9f0dc"
-					(reference "R1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4001")
-		(at 144.78 95.25 270)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "bba8accb-52e2-4dcf-baa8-70ca226cb062")
-		(property "Reference" "D13"
-			(at 147.32 93.9799 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1N4001"
-			(at 147.32 96.5199 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P7.62mm_Horizontal"
-			(at 144.78 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 144.78 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "50V 1A General Purpose Rectifier Diode, DO-41"
-			(at 144.78 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 144.78 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 144.78 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "abfa4c62-0dd5-4c98-9194-a40b89c596a3")
-		)
-		(pin "2"
-			(uuid "7878b58a-f0bc-43c8-bac9-6625200ce877")
-		)
-		(instances
-			(project "555Sandbox"
-				(path "/d3ec5529-4071-49eb-a022-408dfaa9f0dc"
-					(reference "D13")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Switch:SW_Push")
-		(at 60.96 105.41 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "c672de8c-f9ee-4c9c-8061-beaabaebd1be")
-		(property "Reference" "SW1"
-			(at 62.23 104.1399 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Value" "RESET"
-			(at 62.23 106.6799 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-			)
-		)
-		(property "Footprint" "Button_Switch_THT:SW_PUSH_6mm_H4.3mm"
-			(at 55.88 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 55.88 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Push button switch, generic, two pins"
-			(at 60.96 105.41 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "2"
-			(uuid "5163454f-2eab-4c75-9721-6fdf694f25b9")
-		)
-		(pin "1"
-			(uuid "e20ff3be-209d-4ae7-ae42-688c4568ac88")
-		)
-		(instances
-			(project "555Sandbox"
-				(path "/d3ec5529-4071-49eb-a022-408dfaa9f0dc"
-					(reference "SW1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "power:GND")
-		(at 95.25 49.53 0)
+		(at 80.01 49.53 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3491,7 +3737,7 @@
 		(fields_autoplaced yes)
 		(uuid "cd7fa464-e952-4635-aa5c-8436ba80d511")
 		(property "Reference" "#PWR017"
-			(at 95.25 55.88 0)
+			(at 80.01 55.88 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3500,7 +3746,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 95.25 54.61 0)
+			(at 80.01 54.61 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3508,7 +3754,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 95.25 49.53 0)
+			(at 80.01 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3517,7 +3763,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 95.25 49.53 0)
+			(at 80.01 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3526,7 +3772,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 95.25 49.53 0)
+			(at 80.01 49.53 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3564,7 +3810,7 @@
 				)
 			)
 		)
-		(property "Value" "200"
+		(property "Value" "300"
 			(at 223.52 92.71 90)
 			(effects
 				(font
@@ -3572,7 +3818,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical"
+		(property "Footprint" "Resistor_SMD:R_0603_1608Metric"
 			(at 223.52 98.298 90)
 			(effects
 				(font
@@ -3592,6 +3838,15 @@
 		)
 		(property "Description" "Resistor"
 			(at 223.52 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Part" "C23025"
+			(at 223.52 96.52 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3620,7 +3875,7 @@
 		(mirror x)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(uuid "e2bf7b94-e14f-4979-9bcf-08523e472749")
@@ -3632,7 +3887,7 @@
 				)
 			)
 		)
-		(property "Value" "100K"
+		(property "Value" "250K"
 			(at 139.7 106.68 90)
 			(effects
 				(font
@@ -3640,7 +3895,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Potentiometer_THT:Potentiometer_Alps_RK163_Single_Horizontal"
+		(property "Footprint" "Potentiometer_THT:Potentiometer_Runtron_RM-065_Vertical"
 			(at 139.7 106.68 0)
 			(effects
 				(font
@@ -3819,7 +4074,7 @@
 	)
 	(symbol
 		(lib_id "power:VCC")
-		(at 60.96 87.63 0)
+		(at 60.96 95.25 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -3828,7 +4083,7 @@
 		(fields_autoplaced yes)
 		(uuid "f127123a-7b14-45a5-aa0e-759f1b809cd4")
 		(property "Reference" "#PWR06"
-			(at 60.96 91.44 0)
+			(at 60.96 99.06 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3837,7 +4092,7 @@
 			)
 		)
 		(property "Value" "VCC"
-			(at 60.96 82.55 0)
+			(at 60.96 90.17 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3845,7 +4100,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 60.96 87.63 0)
+			(at 60.96 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3854,7 +4109,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 60.96 87.63 0)
+			(at 60.96 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3863,7 +4118,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"VCC\""
-			(at 60.96 87.63 0)
+			(at 60.96 95.25 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3879,209 +4134,6 @@
 				(path "/d3ec5529-4071-49eb-a022-408dfaa9f0dc"
 					(reference "#PWR06")
 					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Connector:Conn_01x02_Pin")
-		(at 87.63 44.45 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "f540f8d3-74c5-40d7-81b8-c0436e14fc77")
-		(property "Reference" "J1"
-			(at 88.265 39.37 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "VIN"
-			(at 88.265 41.91 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_Wire:SolderWire-1.5sqmm_1x02_P6mm_D1.7mm_OD3mm"
-			(at 87.63 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 87.63 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Generic connector, single row, 01x02, script generated"
-			(at 87.63 44.45 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "3e6b308c-beb6-4033-a1f2-05d5c0c1dde7")
-		)
-		(pin "2"
-			(uuid "1243d0f5-2802-40fc-9093-523d5a85e29c")
-		)
-		(instances
-			(project "555Sandbox"
-				(path "/d3ec5529-4071-49eb-a022-408dfaa9f0dc"
-					(reference "J1")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Diode:1N4001")
-		(at 134.62 95.25 90)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "fa613e33-8514-467a-a2f8-c7cac9c33a96")
-		(property "Reference" "D12"
-			(at 132.334 93.98 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "1N4001"
-			(at 132.334 96.266 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" "Diode_THT:D_DO-41_SOD81_P7.62mm_Horizontal"
-			(at 134.62 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "http://www.vishay.com/docs/88503/1n4001.pdf"
-			(at 134.62 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "50V 1A General Purpose Rectifier Diode, DO-41"
-			(at 134.62 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Device" "D"
-			(at 134.62 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Sim.Pins" "1=K 2=A"
-			(at 134.62 95.25 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "abfa4c62-0dd5-4c98-9194-a40b89c596a4")
-		)
-		(pin "2"
-			(uuid "7878b58a-f0bc-43c8-bac9-6625200ce878")
-		)
-		(instances
-			(project "555Sandbox"
-				(path "/d3ec5529-4071-49eb-a022-408dfaa9f0dc"
-					(reference "D12")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(sheet
-		(at 40.64 135.89)
-		(size 26.67 12.7)
-		(fields_autoplaced yes)
-		(stroke
-			(width 0.1524)
-			(type solid)
-		)
-		(fill
-			(color 0 0 0 0.0000)
-		)
-		(uuid "36bc0783-40fd-4027-87f9-17cbb705ca8e")
-		(property "Sheetname" "Voltage Meter"
-			(at 40.64 135.1784 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left bottom)
-			)
-		)
-		(property "Sheetfile" "meter.kicad_sch"
-			(at 40.64 149.1746 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left top)
-			)
-		)
-		(pin "VSIG" input
-			(at 40.64 142.24 180)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-			(uuid "f9f007dc-abe8-4e08-a286-10cda865be39")
-		)
-		(instances
-			(project "555Sandbox"
-				(path "/d3ec5529-4071-49eb-a022-408dfaa9f0dc"
-					(page "2")
 				)
 			)
 		)

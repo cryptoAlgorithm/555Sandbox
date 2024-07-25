@@ -2877,7 +2877,7 @@
 				)
 			)
 		)
-		(property "Value" "3K3"
+		(property "Value" "2K"
 			(at 52.07 124.46 90)
 			(effects
 				(font
@@ -3144,7 +3144,7 @@
 				)
 			)
 		)
-		(property "Value" "3K3"
+		(property "Value" "2K"
 			(at 52.07 116.84 90)
 			(effects
 				(font
