@@ -1,0 +1,6 @@
+Designator,Val,Package,"Mid X","Mid Y",Rotation,Layer
+"BT1","Battery_Cell","BatteryHolder_Keystone_3000_1x12mm",89.595000,-83.900000,-90.000000,bottom
+"C1","0.1uF","C_0603_1608Metric",87.200000,-77.800000,90.000000,top
+"D1","LED","LED_PLCC_2835",93.500000,-80.500000,90.000000,top
+"R5","300","R_0603_1608Metric",93.300000,-83.500000,180.000000,top
+"U1","CH32V003JxMx","SOP-8_3.9x4.9mm_P1.27mm",89.100000,-83.000000,-90.000000,top

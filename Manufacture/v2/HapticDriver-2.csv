@@ -1,0 +1,6 @@
+Designator,Val,Package,"Mid X","Mid Y",Rotation,Layer
+"BT1","Battery_Cell","Battery:BatteryHolder_Keystone_3000_1x12mm","C238097"
+"C1","0.1uF","Capacitor_SMD:C_0603_1608Metric","C14663"
+"D1","LED","LED_SMD:LED_PLCC_2835","C7371920"
+"R5","300","Resistor_SMD:R_0603_1608Metric","C23025"
+"U1","CH32V003JxMx","Package_SO:SOP-8_3.9x4.9mm_P1.27mm","C5346354"

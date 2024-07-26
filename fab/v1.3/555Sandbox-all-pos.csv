@@ -1,4 +1,3 @@
-Designator,Val,Package,"Mid X","Mid Y",Rotation,Layer
 "BT1","Battery_Cell","BatteryHolder_Keystone_3000_1x12mm",90.400000,-84.100000,-90.000000,bottom
 "C1","0.1uF","C_0603_1608Metric",90.300000,-87.750000,-90.000000,top
 "C2","0.1uF","C_0603_1608Metric",87.100000,-80.400000,90.000000,top
